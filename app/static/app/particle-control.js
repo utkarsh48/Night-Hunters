@@ -111,20 +111,3 @@ particlesJS('particles-js',
   }
   
   );
-
-const animate034 = document.querySelector(".animate034");
-const manyWords = [
-  "terminal",
-  "shell",
-  "bash",
-  "intergration",
-];
-
-function run(i){
-  animate034.innerHTML = manyWords[i];
-}
-let i = 0;
-setInterval(() => {
-  run(i++);
-  if(i>=manyWords.length) i=0;
-}, 1000);

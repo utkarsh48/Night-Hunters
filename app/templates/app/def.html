@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  {% load static %}
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
     <title></title>
+    <style>
+      main{
+        height: 100vh;
+      }
+      h1, h2{
+        margin: 2rem;
+      }
+    </style>
   </head>
   <body>
-    <center>
-      <h1><b> No Worries!</b></h1>
-      <h2><b>Your Account is Secure.</b> </h2>
-    </center>
+    <main>
+      <div id="particles-js">
+      </div>
+      <article class="wrapper">
+        <h1>No Worries!</h1>
+        <h2>Your Account is Secure.</h2>
+      </article>
+    </main>
+    <script src="{% static 'app/particles.js' %}"></script>
+    <script src="{% static 'app/particle-control.js' %}"></script>
   </body>
 </html>

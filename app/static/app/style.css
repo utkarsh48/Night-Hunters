@@ -18,7 +18,8 @@ canvas {
 }
 
 header {
-  height: 3rem;
+  height: 3.5rem;
+  min-height: 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -83,7 +84,7 @@ header span {
 
 main {
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.5);
   padding: 2rem;
 }
 

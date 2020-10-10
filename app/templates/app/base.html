@@ -25,7 +25,7 @@
   <main>
     <section class="route-link-parent">
       <a class="route-links0" href="{% url 'cjack'%}">Click-Jacking</a>
-      <a class="route-links0" href="{% url 'type'%}">Ports</a>
+      <a class="route-links0" href="{% url 'type'%}">Port Scanner</a>
       <a class="route-links0" href="{% url 'bombing'%}">Email Bombing</a>
     </section>
 
@@ -40,5 +40,25 @@
 
 <script src="{% static 'app/particles.js' %}"></script>
 <script src="{% static 'app/particle-control.js' %}"></script>
+<script>
+
+const animate034 = document.querySelector(".animate034");
+const manyWords = [
+  "terminal",
+  "shell",
+  "bash",
+  "intergration",
+];
+
+function run(i){
+  animate034.innerHTML = manyWords[i];
+}
+let i = 0;
+setInterval(() => {
+  run(i++);
+  if(i>=manyWords.length) i=0;
+}, 1000);
+
+</script>
 </body>
 </html>

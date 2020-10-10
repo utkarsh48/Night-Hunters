@@ -24,28 +24,13 @@
         </label>
     
         <div>
-          <label style="display: block; margin: 1rem;">Select the number of emails to be sent</label>
-          <label class="interact-radio-label">
-            250
-            <input required checked type="radio" class="interact-radio" value="250" name="bombMode">
-            <span class="checkmark"></span>
-          </label>
-          <label class="interact-radio-label">
-            500
-            <input required type="radio" class="interact-radio" value="500" name="bombMode">
-            <span class="checkmark"></span>
-          </label>
-          <label class="interact-radio-label">
-            1000
-            <input required type="radio" class="interact-radio" value="1000" name="bombMode">
-            <span class="checkmark"></span>
-          </label>
           <label style="display: block; margin: 1rem;">
-            or Custom
-            <input required type="text" placeholder="number greater than 1" class="interact" name="bombMode">
+            Enter the number of emails
+            <input type="text" placeholder="should be greater than 1" class="interact" name="bombMode">
         </div>
 
-        <label>Email Server
+        <label class="toolTip">Email Server
+          <span class="toolTipText">Only three servers are implemented. Rest will be updated.</span>
           <select name="emailServer">
             <option value="1">Gmail</option>
             <option value="2">Yahoo</option>

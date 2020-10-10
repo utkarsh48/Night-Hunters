@@ -19,7 +19,8 @@ canvas{
 }
 
 header{
-  height: 3rem;
+  height: 3.5rem;
+  min-height: 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -70,7 +71,7 @@ header{
 /////////////////////////////////////////////////overflow can be bug
 main{
   overflow: hidden;
-  background-color: rgb(26,26,26);
+  background-color: rgba(26,26,26, 0.5);
   padding: 2rem;
   article.wrapper{
     h2{
@@ -80,6 +81,7 @@ main{
       color: white;
     }
   }
+  
   section.route-link-parent{
     padding: 1.2rem;
     display: flex;
