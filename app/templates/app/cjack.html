@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click-Jacking</title>
+  <link rel="stylesheet" href="{% static 'app/style.css' %}">
+  <script defer>
+    window.addEventListener("keydown", (e)=>{
+      if(event.keyCode == 123) {
+        e.preventDefault();
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        e.preventDefault();
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        e.preventDefault();
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        e.preventDefault();
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        e.preventDefault();
+      }
+    });
+    window.addEventListener("contextmenu", (e)=>{
+      e.preventDefault();
+    })
+
+    const run=()=>{
+      iframe.src=url.value;
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const iframe = document.getElementById("iframe");
+      const url = document.getElementById("url");
+      const submit = document.getElementById("submit");
+      url.addEventListener("keydown", (e)=>{
+        if(e.keyCode==13 || e.key==="Enter"){
+          run();
+        }
+      });
+      submit.addEventListener("click", run);
+    });
+
+  </script>
+</head>
+<body>
+  <header>
+    <span>Night Hunters</span>
+  </header>
+  <main>
+    <article class="wrapper">
+      <h2>Click-jacking</h2>
+      <div class="card">
+        <label>Enter the URL to check</label>
+        <input class="interact" id="url" type="text" placeholder="http://example.com">
+        <button class="interact" id="submit">Test</button>
+      </div>
+      <iframe src="" id="iframe">Your browser is outdated.</iframe>
+    </article>
+  </main>
+</body>
+</html>

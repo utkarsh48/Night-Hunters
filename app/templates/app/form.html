@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="{% static 'app/style.css' %}">
+
+</head>
+<body>
+  <main>
+    <header>
+      <span>Night Hunters</span>
+    </header>
+    <article class="wrapper">
+      <h2>Email Bombing</h2>
+      <form action="{% url 'bomb'%}" class="card" method="post">
+        {% csrf_token %}
+        <label>
+          Target Email
+          <input required type="text" class="interact" name="targetEmail" placeholder="email">
+        </label>
+    
+        <div>
+          <label style="display: block; margin: 1rem;">Select the number of emails to be sent</label>
+          <label class="interact-radio-label">
+            250
+            <input required checked type="radio" class="interact-radio" value="250" name="bombMode">
+            <span class="checkmark"></span>
+          </label>
+          <label class="interact-radio-label">
+            500
+            <input required type="radio" class="interact-radio" value="500" name="bombMode">
+            <span class="checkmark"></span>
+          </label>
+          <label class="interact-radio-label">
+            1000
+            <input required type="radio" class="interact-radio" value="1000" name="bombMode">
+            <span class="checkmark"></span>
+          </label>
+          <label style="display: block; margin: 1rem;">
+            or Custom
+            <input required type="text" placeholder="number greater than 1" class="interact" name="bombMode">
+        </div>
+
+        <label>Email Server
+          <select name="emailServer">
+            <option value="1">Gmail</option>
+            <option value="2">Yahoo</option>
+            <option value="3">Outlook</option>
+          </select>
+        </label>
+    
+        <label>
+          From Email
+          <input required type="text" class="interact" placeholder="source email" name="fromEmail">
+        </label>
+    
+        <label>
+          Password
+          <input required class="interact" type="password" placeholder="password for authentication" name="password">
+        </label>
+    
+        <label>Subject
+          <input required name="subject" type="text" placeholder="subject of emails to be sent" class="interact">
+        </label>
+    
+        <label>Message
+          <input required name="message" type="text" placeholder="body of emails to be sent" class="interact">
+        </label>
+    
+        <button class="interact" type="submit">Submit</button>
+        <input required class="interact" type="reset">
+      </form>
+    </article>
+  </main>
+</body>
+</html>

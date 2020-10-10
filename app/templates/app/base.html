@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+
+{# MEDIUM STYLE EDITOR#}
+
+  <link rel="stylesheet" href="{% static 'app/style.css' %}">
+</head>
+<body>
+  <header>
+    <span>Night Hunters</span>
+  </header>
+  <div id="particles-js">
+    <div class="headings0">
+      <span class="pageHeading0">
+        Check-Sec
+      </span>
+      <span class="pageSubHeading0 animate034">
+        tools
+      </span>
+    </div>
+  </div>
+  <main>
+    <section class="route-link-parent">
+      <a class="route-links0" href="{% url 'cjack'%}">Click-Jacking</a>
+      <a class="route-links0" href="{% url 'type'%}">Ports</a>
+      <a class="route-links0" href="{% url 'bombing'%}">Email Bombing</a>
+    </section>
+
+    <section class="par-scroll-down-arrow">
+        <div class="scroll-down-arrow toolTip">
+          <span class="toolTipText">How To Use</span>
+          <div class="shape0">
+          </div>
+        </div>
+    </section>
+  </main>
+
+<script src="{% static 'app/particles.js' %}"></script>
+<script src="{% static 'app/particle-control.js' %}"></script>
+</body>
+</html>
