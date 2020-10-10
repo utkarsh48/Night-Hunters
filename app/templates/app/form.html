@@ -14,6 +14,7 @@
     <header>
       <span>Night Hunters</span>
     </header>
+    <div id="particles-js"></div>
     <article class="wrapper">
       <h2>Email Bombing</h2>
       <form action="{% url 'bomb'%}" class="card" method="post">
@@ -61,5 +62,17 @@
       </form>
     </article>
   </main>
+  <footer>
+    <div class="fain">
+      <a class="fainHead" href="">Night Hunters</a>
+    </div>
+    <div class="fain-components">
+      <a href="">Utkarsh Dhiman</a>
+      <a href="">Manpreet Singh Kullar</a>
+      <a href="">Ashwani Kumar</a>
+    </div>
+  </footer>
+  <script src="{% static 'app/particles.js' %}"></script>
+  <script src="{% static 'app/particle-control.js' %}"></script>
 </body>
 </html>

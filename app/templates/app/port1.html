@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html>
+{% load static %}
+
 <head>
   <link rel="stylesheet" href="{% static 'app/style.css' %}">
 <style>
-body  {
-
-  background-color: #cccccc;
-}
-
-
-.button {
-  background-color: #0020C2;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 25px;
-}
-
-
-.button5 {font-size: 24px;}
 </style>
 </head>
 <body>
-<center>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-<h1>Opened Ports are:</h1>
-<h1>{{target}}</h1>
-{% for data in ports %}
-    <h2 style="color:red;"> {{data}}</h2>
-    {% endfor %}
-    {{data}}
-    </center>
+<main>
+  <header>
+    <span>Night Hunters</span>
+  </header>
+  <div id="particles-js"></div>
+  <article class="wrapper">
+    <h2>Opened Ports are:</h2>
+    <h3>{{target}}</h3>
+    {% for data in ports %}
+        <h3 style="color:red;"> {{data}}</h3>
+        {% endfor %}
+        {{data}}
+  </article>
+</main>
+<footer>
+  <div class="fain">
+    <a class="fainHead" href="">Night Hunters</a>
+  </div>
+  <div class="fain-components">
+    <a href="">Utkarsh Dhiman</a>
+    <a href="">Manpreet Singh Kullar</a>
+    <a href="">Ashwani Kumar</a>
+  </div>
+</footer>
+  <script src="{% static 'app/particles.js' %}"></script>
+  <script src="{% static 'app/particle-control.js' %}"></script>
 </body>
 </html>

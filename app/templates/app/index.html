@@ -5,9 +5,6 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="{% static 'app/style.css' %}">
   <style>
-    main{
-      height: 100vh;
-    }
   </style>
 </head>
 <body>
@@ -15,20 +12,65 @@
     <span>Night Hunters</span>
   </header>
   <main>
+    <div id="particles-js">
+    </div>
     <article class="wrapper">
       <h2>Type URL to check Open PORT(s)</h2>
-      <form class="card" action="{% url 'port' %}" method="POST">
+      <form class="card" id="theForm" action="{% url 'port' %}" method="POST">
         {% csrf_token %}
-        <!-- <a id="btn-rec" href="{% url 'speech' %}">
-          <svg width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 6c0-1.66-1.34-3-3-3S9 4.34 9 6v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" fill="#ddd"/></svg>
-        </a> -->
         <input id="inputType" class="interact" placeholder="type here" name ="text" type="text">
-        <button id="btn-send" type="submit" class="interact">
+        <button id="btn-send" type="submit" class="interact toolTip">
+          <span class="toolTipText">It may take upto several minutes.</span>
           Send
         </button>
       </form>
+
+      <div class="hide h-check">
+        <div class="lds-ripple"><div></div><div></div></div>
+        <span class="animate034">Initializing...</span>
+      </div>
     </article>
   </main>
-  <script src="{% static 'app/chat.js'%}"></script>
+  <footer>
+    <div class="fain">
+      <a class="fainHead" href="">Night Hunters</a>
+    </div>
+    <div class="fain-components">
+      <a href="">Utkarsh Dhiman</a>
+      <a href="">Manpreet Singh Kullar</a>
+      <a href="">Ashwani Kumar</a>
+    </div>
+  </footer>
+  <!-- <script src="{% static 'app/chat.js'%}"></script> -->
+  <script src="{% static 'app/particles.js' %}"></script>
+  <script src="{% static 'app/particle-control.js' %}"></script>
+  <script>
+const theForm = document.querySelector("#theForm");
+const animate034 = document.querySelector(".animate034");
+const hCheck = document.querySelector(".h-check");
+const manyWords = [
+  "Increasing processing power",
+  "Increasing power comsumption",
+  "Requesting the Government for resources",
+  "Awaiting Approval",
+  "Checking Funds",
+  "Positioning Satellites"
+];
+
+theForm.addEventListener("submit", superRun);
+function run(i){
+  animate034.innerHTML = manyWords[i];
+}
+function superRun(){
+  hCheck.classList.remove("hide");
+  let i = 0;
+  setInterval(() => {
+  run(i++);
+  if(i>=manyWords.length) i=0;
+}, 10000);
+}
+
+</script>
+
 </body>
 </html>
