@@ -1,0 +1,37 @@
+Description-
+
+Click-Jacking::
+About:
+Clickjacking (User Interface redress attack, UI redress attack, UI redressing) is a malicious technique of tricking a Web user into clicking on something different from what the user perceives they are clicking on, thus potentially revealing confidential information or taking control of their computer while clicking on seemingly innocuous web pages.
+The server didn't return an X-Frame-Options header which means that this website could be at risk of a clickjacking attack. The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <frame> or <iframe>. Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
+This vulnerability affects Web Server.
+
+How to use?
+CheckSec has made this very easy for you to check whether your website is vulnerable to Click-Jacking attack or not.
+User just need to put URL of website in given search box. If the website opens within page without redirection, it means that website is vulnerable.
+The secured website will not get open and will show some error to that.
+
+
+EmailBomber::
+About:
+Email Bombing or Mass mailing consists of sending numerous duplicate mails to the same email address. These types of mail bombs are simple to design but their extreme simplicity means they can be easily detected by spam filters. Email-bombing using mass mailing is also commonly performed as a DDoS attack by employing the use of botnets; hierarchical networks of computers compromised by malware and under the attacker's control. Similar to their use in spamming, the attacker instructs the botnet to send out millions or even billions of emails, but unlike normal botnet spamming, the emails are all addressed to only one or a few addresses the attacker wishes to flood. This form of email bombing is similar in purpose to other DDoS flooding attacks. As the targets are frequently the dedicated hosts handling website and email accounts of a business, this type of attack can be just as devastating to both services of the host.
+
+How to use?
+CheckSec provides you the GUI interface to check whether the targeted email-id is prone to mass mailing or not.
+You need to fill the required inputs demanded for proper functioning of this tool. If the targeted email is secured then the response will be Your Email is secure otherwise the attack  would be successful in mass mailing.
+
+Disclaimer: This tool is made to check security of email and to educate people of IT Industry. User will be responsible if he/she abuse this tool.
+
+Port Scanner::
+About:
+A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities.
+
+A port scan or portscan is a process that sends client requests to a range of server port addresses on a host, with the goal of finding an active port; this is not a nefarious process in and of itself.[1] The majority of uses of a port scan are not attacks, but rather simple probes to determine services available on a remote machine.
+
+This tool is used by penetration tester while enumerating the network and check for open ports.
+
+How to use?
+CheckSec will allow you to check for open ports within some range. You can change the range also in code according to your requirment. 
+User needs to put IP address for which he/she wants to check it and it would be helpful in securing the network. Keep calm while using he tool because it take time for scan for ports and providing you accurate information.
+
+
