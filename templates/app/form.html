@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <center>
+  <form action="{% url 'bomb'%}" method="post">
+     {% csrf_token %}
+    <label>
+      Target Email
+      <input type="text" name="targetEmail">
+    </label><br>
+
+    <div>
+      Select the number of emails to be sent<br>
+    <label>
+      <input type="radio" value="1000" name="bombMode">
+      1000
+    </label><br>
+    <label>
+      <input type="radio" value="500" name="bombMode">
+      500
+    </label><br>
+    <label>
+      <input type="radio" value="250" name="bombMode">
+      250
+    </label><br>
+    <label>
+      Custom
+      <input type="text" name="bombMode">
+    </div>
+
+    <label>Email Server
+      <select name="emailServer">
+        <option value="1">Gmail</option>
+        <option value="2">Yahoo</option>
+        <option value="3">Outlook</option>
+      </select>
+    </label><br>
+
+    <label>
+      From Email
+      <input type="text" name="fromEmail">
+    </label><br>
+
+    <label>
+      Password
+      <input type="password" name="password">
+    </label><br>
+
+    <label>Subject
+      <input name="subject" type="text">
+    </label><br>
+
+    <label>Message
+      <input name="message" type="text">
+    </label><br>
+
+    <button type="submit">Submit</button>
+    <input type="reset">
+  </form>
+</center>
+</body>
+</html>
