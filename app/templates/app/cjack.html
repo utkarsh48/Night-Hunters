@@ -57,10 +57,18 @@
       <div class="card">
         <label>Enter the URL to check</label>
         <input class="interact" id="url" type="text" placeholder="http://example.com">
-        <button class="interact" id="submit">Test</button>
+        <button class="interact toolTip" id="submit"><span class="toolTipText">If page loads, its vulnerable.</span>Test</button>
       </div>
       <iframe src="" id="iframe">Your browser is outdated.</iframe>
     </article>
+    <section class="how-to-use card">
+      <span class="htu-head">
+        Description
+      </span>
+      <span class="htu-text">
+        Clickjacking (User Interface redress attack, UI redress attack, UI redressing) is a malicious technique of tricking a Web user into clicking on something different from what the user perceives they are clicking on, thus potentially revealing confidential information or taking control of their computer while clicking on seemingly innocuous web pages. The server didn't return an X-Frame-Options header which means that this website could be at risk of a clickjacking attack. The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a &lt;frame&gt; or &lt;iframe&gt;. Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites. This vulnerability affects Web Server.
+      </span>
+    </section>
   </main>
   <footer>
     <div class="fain">

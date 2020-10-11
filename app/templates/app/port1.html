@@ -5,6 +5,9 @@
 <head>
   <link rel="stylesheet" href="{% static 'app/style.css' %}">
 <style>
+  article.wrapper{
+      min-height: calc(100vh - 15rem);
+    }
 </style>
 </head>
 <body>
@@ -17,7 +20,7 @@
     <h2>Opened Ports are:</h2>
     <h3>{{target}}</h3>
     {% for data in ports %}
-        <h3 style="color:red;"> {{data}}</h3>
+        <h3 style="color:tomato;"> {{data}}</h3>
         {% endfor %}
         {{data}}
   </article>

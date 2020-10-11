@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="{% static 'app/style.css' %}">
   <style>
+    article.wrapper{
+      min-height: calc(100vh - 15rem);
+    }
   </style>
+  <title>Port Scanner</title>
 </head>
 <body>
   <header>
@@ -29,6 +33,16 @@
         <div class="lds-ripple"><div></div><div></div></div>
         <span class="animate034">Initializing...</span>
       </div>
+      <section class="how-to-use card">
+        <span class="htu-head">
+          Description
+        </span>
+        <span class="htu-text">
+          A port scanner is an application designed to probe a server or host for open ports. Such an application may be used by administrators to verify security policies of their networks and by attackers to identify network services running on a host and exploit vulnerabilities. 
+          A port scan or portscan is a process that sends client requests to a range of server port addresses on a host, with the goal of finding an active port; this is not a nefarious process in and of itself.[1] The majority of uses of a port scan are not attacks, but rather simple probes to determine services available on a remote machine. 
+          This tool is used by penetration tester while enumerating the network and check for open ports.
+        </span>
+      </section>
     </article>
   </main>
   <footer>
